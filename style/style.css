@@ -1,0 +1,441 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@400;700&family=Roboto&display=swap");
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  font-family: "Montserrat", sans-serif;
+}
+
+main {
+  max-width: 100%;
+}
+main .ctn {
+  padding: 30px 1em 0;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+main .subheader {
+  font-family: "Kaushan Script", cursive;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+main .header {
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+main .bottom_border {
+  width: 60px;
+  height: 3px;
+  background-color: rgba(243, 129, 129, 0.9);
+  margin: 25px auto 0;
+}
+main .banner {
+  background-image: linear-gradient(to bottom, rgba(243, 129, 129, 0.9), rgba(252, 227, 138, 0.9)), url("../assets/background1.jpg");
+  max-height: 1134px;
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+main .banner .navbar__ctn {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+main .banner .navbar__logo {
+  font-weight: 700;
+  font-size: 30px;
+  color: #fff;
+}
+main .banner .navbar__link_logo {
+  text-decoration: none;
+  color: #fff;
+  transition: linear 0.5s;
+}
+main .banner .navbar__link_logo:hover {
+  color: rgba(252, 227, 138, 0.9);
+}
+main .banner .navbar__list {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+main .banner .navbar__list_item {
+  margin: 0 25px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+main .banner .navbar__link {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+main .banner .navbar__link:hover {
+  color: rgba(252, 227, 138, 0.9);
+}
+main .banner .navbar__link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: rgba(252, 227, 138, 0.9);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+main .banner .navbar__link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+main .banner__text {
+  margin-top: 170px;
+}
+main .banner__text .creative_text {
+  font-family: "Kaushan Script", cursive;
+  font-size: 72px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 30px;
+}
+main .banner__text .welcome_text {
+  font-weight: 700;
+  font-size: 150px;
+  text-transform: uppercase;
+  line-height: 140px;
+  text-align: center;
+  color: #fff;
+}
+main .banner .learn_more_button {
+  padding: 15px 40px;
+  border: 4px solid #fff;
+  background: transparent;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #fff;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 125px;
+  cursor: pointer;
+  transition: all 1s;
+}
+main .banner .learn_more_button:hover {
+  background-color: #fff;
+  color: #000;
+}
+main .services__ctn {
+  padding: 45px 1em 0;
+}
+main .services__list {
+  margin-top: 65px;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 65px 100px;
+}
+main .services__listItem {
+  display: flex;
+}
+main .services .left_ctn {
+  margin-right: 25px;
+}
+main .services .service__header {
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+main .services .service__description {
+  font-family: "Roboto", sans-serif;
+  color: #999999;
+  font-size: 15px;
+  line-height: 24px;
+}
+main .team__ctn {
+  padding-top: 100px;
+  padding-bottom: 80px;
+}
+main .team__description {
+  padding: 45px 0 100px;
+  font-size: 15px;
+  line-height: 25px;
+  color: #999999;
+  text-align: center;
+}
+main .team__list {
+  list-style-type: none;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 20px;
+  padding-bottom: 100px;
+}
+main .team__listItem {
+  position: relative;
+  max-width: 380px;
+  width: 100%;
+  height: 470px;
+}
+main .team__listItem__ctn {
+  width: 100%;
+  height: 470px;
+  background-color: #95e1d3;
+}
+main .team__listItem .avatar1 {
+  background: url("../assets/graphic_designer.jpg");
+}
+main .team__listItem .avatar2 {
+  background: url("../assets/ux_designer.jpg");
+}
+main .team__listItem .avatar3 {
+  background: url("../assets/developer.jpg");
+}
+main .team__listItem .avatar_image {
+  height: 100%;
+  vertical-align: bottom;
+  cursor: pointer;
+  transition: all 0.35s;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+main .team__listItem .avatar_image:hover {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transform: translate(-10px, -10px);
+}
+main .team__listItem .avatar1:hover {
+  background: linear-gradient(to bottom, rgba(243, 129, 129, 0.9), rgba(252, 227, 138, 0.9)), url("../assets/graphic_designer.jpg");
+}
+main .team__listItem .avatar2:hover {
+  background: linear-gradient(to bottom, rgba(243, 129, 129, 0.9), rgba(252, 227, 138, 0.9)), url("../assets/ux_designer.jpg");
+}
+main .team__listItem .avatar3:hover {
+  background: linear-gradient(to bottom, rgba(243, 129, 129, 0.9), rgba(252, 227, 138, 0.9)), url("../assets/developer.jpg");
+}
+main .team__listItem .social_media {
+  width: 100%;
+  height: 100%;
+  transition: linear 0.5s;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.35s;
+}
+main .team__listItem .social_media__list {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+main .team__listItem .social_media__listItem {
+  width: 55px;
+  height: 55px;
+  position: relative;
+  cursor: pointer;
+}
+main .team__listItem .social_media__link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+main .team__listItem .social_media:hover {
+  opacity: 1;
+}
+main .team__listItem .social_media .facebook {
+  background: url("../assets/facebook.svg") no-repeat center center;
+  background-color: rgba(252, 227, 138, 0.9);
+}
+main .team__listItem .social_media .facebook:hover {
+  background: url("../assets/facebook_hover.svg") no-repeat center center;
+  background-color: rgba(243, 129, 129, 0.9);
+}
+main .team__listItem .social_media .twitter {
+  background: url("../assets/twitter.svg") no-repeat center center;
+  background-color: rgba(252, 227, 138, 0.9);
+}
+main .team__listItem .social_media .twitter:hover {
+  background: url("../assets/twitter_hover.svg") no-repeat center center;
+  background-color: rgba(243, 129, 129, 0.9);
+}
+main .team__listItem .social_media .pinterest {
+  background: url("../assets/pinterest.svg") no-repeat center center;
+  background-color: rgba(252, 227, 138, 0.9);
+}
+main .team__listItem .social_media .pinterest:hover {
+  background: url("../assets/pinterest_hover.svg") no-repeat center center;
+  background-color: rgba(243, 129, 129, 0.9);
+}
+main .team__listItem .social_media .instagram {
+  background: url("../assets/instagram.svg") no-repeat center center;
+  background-color: rgba(252, 227, 138, 0.9);
+}
+main .team__listItem .social_media .instagram:hover {
+  background: url("../assets/instagram_hover.svg") no-repeat center center;
+  background-color: rgba(243, 129, 129, 0.9);
+}
+main .team__employee {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+main .team__employeePosition {
+  font-family: "Roboto", sans-serif;
+  color: #999999;
+  font-size: 15px;
+  line-height: 24px;
+  text-align: center;
+  font-style: italic;
+}
+
+footer {
+  width: 100vw;
+}
+footer .ctn {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #e5e5e5;
+  padding: 10px 1em;
+}
+footer .left_ctn {
+  font-size: 14px;
+}
+footer .left_ctn a {
+  color: rgba(243, 129, 129, 0.9);
+  text-decoration: none;
+}
+footer .right_ctn {
+  position: relative;
+}
+footer .right_ctn form {
+  display: flex;
+  max-width: 380px;
+  width: 100%;
+}
+footer .right_ctn input {
+  width: 230px;
+  height: 40px;
+  padding-left: 10px;
+  font-family: "Roboto", sans-serif;
+  color: #999999;
+  font-size: 15px;
+  line-height: 24px;
+  font-style: italic;
+  border: 1px solid #e5e5e5;
+  border-right: none;
+  color: #cccccc;
+  outline: none;
+}
+footer .right_ctn input::placeholder {
+  color: #cccccc;
+}
+footer .right_ctn button {
+  width: 150px;
+  outline: none;
+  border: 1px solid #95e1d3;
+  background-color: #95e1d3;
+  height: 40px;
+  cursor: pointer;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 15px;
+  transition: all 0.5s;
+}
+footer .right_ctn button:hover {
+  background-color: transparent;
+  color: #cccccc;
+  border: 1px solid #e5e5e5;
+  border-left: none;
+}
+
+@media screen and (max-width: 900px) {
+  main .team__list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 90px 30px;
+  }
+  main .banner__text .welcome_text {
+    font-size: 120px;
+    line-height: 120px;
+  }
+}
+@media screen and (max-width: 767px) {
+  main .banner .navbar__ctn {
+    grid-template-columns: auto;
+  }
+  main .banner .navbar__list {
+    margin-top: 30px;
+    justify-content: space-between;
+  }
+  main .banner .navbar__list_item {
+    margin: 0;
+  }
+  main .banner .navbar__logo {
+    text-align: center;
+  }
+  main .banner__text {
+    margin-top: 100px;
+  }
+  main .banner__text .creative_text {
+    font-size: 60px;
+  }
+  main .banner__text .welcome_text {
+    font-size: 100px;
+    line-height: 100px;
+  }
+  main .services__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 610px) {
+  main .team__list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  main .services__list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  footer .ctn {
+    flex-direction: column-reverse;
+    padding: 20px;
+  }
+  footer .ctn .left_ctn {
+    padding-top: 20px;
+  }
+}
+@media screen and (max-width: 550px) {
+  main .banner__text .creative_text {
+    font-size: 50px;
+  }
+  main .banner__text .welcome_text {
+    font-size: 65px;
+    line-height: 75px;
+  }
+}/*# sourceMappingURL=style.css.map */
